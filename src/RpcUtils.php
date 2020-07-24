@@ -160,7 +160,7 @@ class RpcUtils
 
         $params = [];
         foreach ($query as $k => $v) {
-            if (!empty($v)) {
+            if ($v!==null) {
                 //对参数名称和参数值进行 URL 编码
                 $k = rawurlencode($k);
                 $v = rawurlencode($v);
